@@ -23,7 +23,7 @@ sub push_to_topic {
         return;
     }
     return if (!$server || !$server->{connected} ||
-               !$winit || $winit->{type} != 'CHANNEL');
+               !$winit || $winit->{type} ne 'CHANNEL');
 
     my $topic = $winit->{topic};
 
@@ -34,4 +34,4 @@ sub push_to_topic {
     }
 }
 
-Irssi::command_bind('topicsed', 'topicsed');
+Irssi::command_bind('push-topic', 'push_to_topic');
