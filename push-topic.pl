@@ -4,10 +4,9 @@ use warnings;
 
 use Irssi;
 
-use vars %IRSSI;
-%IRSSI = (
+our %IRSSI = (
     authors     => do { use utf8; "Ævar Arnfjörð Bjarmason" },
-    contact     => "avarab@gmail.com",
+    contact     => 'avarab@gmail.com',
     name        => "push-topic",
     description => "Push a string to the front of the topic",
     license     => "public domain",
